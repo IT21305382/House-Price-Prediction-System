@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USA House Price Prediction System</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Living (Square Feet)</h2>
+    <input class="area"  type="text" id="sqft_living" class="floatLabel" name="sqft_living" value="1000">
+	<h2>Lot (Square Feet)</h2>
+    <input class="area"  type="text" id="sqft_lot" class="floatLabel" name="sqft_lot" value="1000">
+	<h2>Above (Square Feet)</h2>
+    <input class="area"  type="text" id="sqft_above" class="floatLabel" name="sqft_above" value="1000">
+	<h2>Floors</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bhk-1" name="floors" value="1"/>
+		<label for="radio-bhk-1">1</label>
+		<input type="radio" id="radio-bhk-2" name="floors" value="2" checked/>
+		<label for="radio-bhk-2">2</label>
+		<input type="radio" id="radio-bhk-3" name="floors" value="3"/>
+		<label for="radio-bhk-3">3</label>
+		<input type="radio" id="radio-bhk-4" name="floors" value="4"/>
+		<label for="radio-bhk-4">4</label>
+		<input type="radio" id="radio-bhk-5" name="floors" value="5"/>
+		<label for="radio-bhk-5">5</label>
+	</div>
+	</form>
+<form class="form">
+		<h2>City</h2>
+	<div>
+  <select class="city" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Choose a City</option>
+		<option>Bothell</option>
+        <option>Shoreline</option>
+  </select>
+</div>
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+</body>
+</html>
